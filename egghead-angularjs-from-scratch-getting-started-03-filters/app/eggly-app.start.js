@@ -20,17 +20,21 @@ angular.module('Eggly', [
             {"id": 7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
             {"id": 8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
         ];
-
+        //property called currentCategory to keep track of the currentCategory...set to null
+        //and to dynamically apply a class to the view
         $scope.currentCategory = null;
 
+
+        //method
         function setCurrentCategory(category) {
             $scope.currentCategory = category;
         }
-
+        //method 
         function isCurrentCategory(category) {
             return $scope.currentCategory !==null & category.name === $scope.currentCategory.name;
         }
 
+        //made availbale to the view by attaching it to the scope object 
         $scope.setCurrentCategory = setCurrentCategory;
         $scope.isCurrentCategory = isCurrentCategory;
 
