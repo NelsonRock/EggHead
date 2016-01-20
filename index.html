@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>EggHead Videos</title>
+
+	<script type="text/javascript"
+ 		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js">
+	</script>
+
+	<script>
+		var app = angular.module("app", []);
+
+		app.controller("RoomCtrl", function(){
+			this.openDoor = function () {
+			alert("creak");
+			};
+
+		this.buttonTitle = "I'm a button";
+		});
+
+	</script>
+</head>
+<body>
+	<div ng-app="app" ng-controller="RoomCtrl as room">
+
+		<button class="button" ng-click="room.openDoor()">
+			{{room.buttonTitle}}
+		</button> 
+	
+
+	</div>
+	
+</body>
+</html>
