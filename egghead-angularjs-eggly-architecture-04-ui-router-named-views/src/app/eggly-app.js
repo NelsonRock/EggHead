@@ -11,7 +11,7 @@ angular.module('Eggly', [
             })
         ;
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/'); //otherwise redirect to the root of the application 
     })
     .controller('MainCtrl', function ($scope) {
         $scope.categories = [
