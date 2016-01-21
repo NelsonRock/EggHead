@@ -17,7 +17,7 @@ angular.module('categories.bookmarks', [
             })
         ;
     })
-    .controller('BookmarksListCtrl', function ($stateParams  ) {
+    .controller('BookmarksListCtrl', function ($stateParams  ) {     //got rid of the $scope object
         var bookmarksListCtrl = this;
         bookmarksListCtrl.currentCategoryName = $stateParams.category;
     })
