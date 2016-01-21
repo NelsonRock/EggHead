@@ -7,7 +7,7 @@ angular.module('categories.bookmarks', [
     .config(function($stateProvider){
         $stateProvider
             .state('eggly.categories.bookmarks', {
-                url: 'categories/:category', //parameter introduced into the url...have to change the Controller using state Params service
+                url: 'categories/:category',
                 views: {
                     'bookmarks@': {
                         templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html',
@@ -18,6 +18,6 @@ angular.module('categories.bookmarks', [
         ;
     })
     .controller('BookmarksCtrl', function ($scope,$stateParams  ) {
-        $scope.currentCategoryName = $stateParams.category; //this allows
+        $scope.currentCategoryName = $stateParams.category;
     })
 ;
