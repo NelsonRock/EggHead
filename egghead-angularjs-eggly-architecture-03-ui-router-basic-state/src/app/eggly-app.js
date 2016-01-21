@@ -1,7 +1,17 @@
 angular.module('Eggly', [
+    'ui.router',
     'categories',
-    'categories.bookmarks' //submodules *transitive relationship, and self documenting file structure
+    'categories.bookmarks'
 ])
+    .config(function ($stateProvider) {
+        $stateProvider
+            .state('eggly', {
+                url: '/', // Make to navigate to index.html#/
+                templateUrl: 'app/categories/categories.tmpl.html',
+                controller: 'MainCtrl'
+            })
+        ;
+    })
     .controller('MainCtrl', function ($scope) {
         $scope.categories = [
             {"id": 0, "name": "Development"},
